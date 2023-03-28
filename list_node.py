@@ -1,16 +1,16 @@
 class ListNode:
-    def __init__(self, vaule=None, next=None):
+    def __init__(self, value=None, next=None):
         if next is not None and not isinstance(next, ListNode):
             raise(TypeError)
-        self.value = vaule
-        self.next
+        self.value = value
+        self.next = next
 
     def __str__(self):
-        vaules = []
+        values = []
         while self is not None:
-            vaules.append(self.vaule)
+            values.append(self.value)
             self = self.next
-        return "("+") -> (".join(map(str, vaules))+") -> None"
+        return "("+") -> (".join(map(str, values))+") -> None"
     
     def __eq__(self, other):
         if not isinstance(other, ListNode):
